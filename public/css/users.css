@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f3efe7;
+  color: #3a3a3a;
+}
+
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Title */
+main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Table wrapper biar ada card feel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fdf6ec;
+  border: 2px solid #d6c7b8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+thead th {
+  background: #e9dfd3;
+  padding: 14px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 2px solid #d6c7b8;
+  color: #4a4a4a;
+}
+
+/* Body */
+tbody td {
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1.5px solid #e5d9cc;
+}
+
+/* Hover row */
+tbody tr:hover {
+  background: #f7efe5;
+  transition: 0.2s;
+}
+
+/* Last row no border */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Action links */
+td a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.25s;
+}
+
+/* Edit button */
+td a[href*="edit"] {
+  background: #5ba199;
+  color: white;
+}
+
+td a[href*="edit"]:hover {
+  background: #4d8f88;
+}
+
+/* Delete button */
+td a[href*="delete"] {
+  background: #e57373;
+  color: white;
+}
+
+td a[href*="delete"]:hover {
+  background: #d65c5c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table, thead, tbody, tr, td, th {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    background: #fdf6ec;
+    margin-bottom: 15px;
+    border: 2px solid #d6c7b8;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  td {
+    border: none;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #666;
+  }
+}

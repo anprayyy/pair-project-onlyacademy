@@ -1,0 +1,117 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 40px;
+  background: #fdf6ec;
+  border-bottom: 2px solid #e5d9cc;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT GROUP */
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2f2f2f;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  color: #5ba199;
+}
+
+/* NAV LINK (Users) */
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #6b6b6b;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+/* Hover biar hidup */
+.nav-link:hover {
+  background: #f3e8da;
+  color: #2f2f2f;
+  transform: translateY(-1px);
+}
+
+/* RIGHT (Logout) */
+.right {
+  display: flex;
+  align-items: center;
+}
+
+/* Logout button */
+.logout {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  background: #e57373;
+  color: white;
+
+  transition: 0.25s;
+}
+
+.logout:hover {
+  background: #d65c5c;
+  transform: translateY(-1px);
+}
+
+/* Click feel */
+a:active {
+  transform: scale(0.97);
+}
+
+/* Animation */
+header {
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-link,
+  .logout {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}

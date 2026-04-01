@@ -1,0 +1,118 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f3efe7;
+  color: #2d2d2d;
+}
+
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* TITLE */
+main h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* ADD BUTTON */
+main > a {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #4a8f88;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+main > a:hover {
+  background: #3f7c76;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fdf6ec;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* HEADER */
+thead th {
+  text-align: left;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a7a7a;
+  background: #efe5d8;
+}
+
+/* BODY */
+tbody td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #e7dccf;
+}
+
+/* ROW HOVER */
+tbody tr:hover {
+  background: #f7efe5;
+}
+
+/* FILE LINK */
+.file-link {
+  color: #4a8f88;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+}
+
+/* BUTTONS */
+td a {
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
+}
+
+/* EDIT */
+td a[href*="edit"] {
+  background: #4a8f88;
+  color: white;
+}
+
+/* DELETE */
+td a[href*="delete"] {
+  background: #d96b6b;
+  color: white;
+}
+
+/* FINISH */
+.btn-finish {
+  background: #6fbf73;
+  color: white;
+}
+
+/* PROGRESS */
+.btn-progress {
+  background: #f0a94b;
+  color: white;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/addMaterials.css" />
+    <title>Add Material</title>
+  </head>
+  <body>
+    <%- include("header") %>
+    <main>
+    <h1>Add New Material</h1>
+
+    <form action="/courses/<%= data.id %>/materials/add" method="post">
+      <label>Material Name</label>
+      <input type="text" name="name" />
+
+      <label>fileUrl</label>
+      <input type="text" name="fileUrl" />
+
+      <button type="submit">Add Material</button>
+    </form>
+    </main>
+    <%- include("footer") %>
+  </body>
+</html>

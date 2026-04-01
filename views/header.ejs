@@ -1,0 +1,13 @@
+<header>
+  <div class="left">
+    <a href="/home" class="logo">onlyAcademy</a>
+
+    <% if (role !== 'Student') { %>
+      <a href="/users" class="nav-link">Users</a>
+    <% } %>
+  </div>
+
+  <div class="right">
+    <a href="/logout" class="logout">Logout</a>
+  </div>
+</header>
