@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* FORM CONTAINER */
+form {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ERROR */
+.p-error {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #b42318 !important;
+  background: #fdecec;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #f5c2c0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LABEL */
+label {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* INPUT */
+input,
+textarea,
+select {
+  margin-top: 6px;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #fafafa;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* FOCUS EFFECT */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+/* BUTTON */
+button {
+  margin-top: 25px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4f46e5;
+}

@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+/* LEFT SIDE (IMAGE) */
+body::before {
+  content: "";
+  flex: 1;
+  background: 
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
+  background-size: cover;
+  background-position: center;
+}
+
+/* RIGHT SIDE (FORM) */
+.login-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  background: #ffffff;
+}
+
+/* TITLE */
+.login-container h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+/* ERROR */
+.error-message {
+  background: #fdecec;
+  color: #b42318;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  border: 1px solid #f5c2c0;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+label {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+input {
+  margin-top: 6px;
+  padding: 11px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fafafa;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+/* REGISTER */
+.register-here {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+}
+
+.register-here a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-here a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE (mobile) */
+@media (max-width: 768px) {
+  body::before {
+    display: none;
+  }
+
+  .login-container {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+/* PASSWORD WRAPPER */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 35%;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888;
+}
+
+/* EXTRA OPTIONS */
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+}
+
+.form-extra a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.form-extra a:hover {
+  text-decoration: underline;
+}
+
+/* DIVIDER */
+.divider {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #e5e7eb;
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}

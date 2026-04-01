@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/editCourses.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Edit Course</title>
+</head>
+
+<body>
+  <%- include("header") %>
+    
+  <main>
+  <h1>Edit Course</h1>
+
+  <% if (errors) { %>
+  <% errors = errors.split(',') %>
+  <% errors.forEach(el => { %>
+  <p class="p-error" style="color: red; font-weight: bold;"><%= el %></p>
+  <% }) %>
+  <% } %>
+
+  <form action="/courses/<%= data.id %>/edit" method="post">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= data.name %>"/>
+
+    <label>Description</label>
+    <textarea name="description"><%= data.description %></textarea>
+
+    <label>Price</label>
+    <input type="number" name="price" value="<%= data.price %>"/>
+
+    <label>Category</label>
+    <select name="category">
+      <option selected disabled hidden>--Choose--</option>
+      <% ["Pemrograman", "Web Dasar","Frontend", "Backend", "Database"].forEach(category => { %>
+      <option value="<%= category %>" <%= data.category === category ? 'selected' : '' %>><%= category %></option>
+      <% }) %>
+    </select>
+
+    <button type="submit">Edit Course</button>
+  </form>
+  </main>
+  <%- include("footer") %>
+</body>
+
+</html>
