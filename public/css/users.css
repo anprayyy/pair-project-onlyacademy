@@ -1,139 +1,126 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background:
-    linear-gradient(
-      130deg,
-      rgba(86, 36, 208, 0.1) 0%,
-      rgba(252, 163, 17, 0.07) 100%
-    ),
-    #f9f9fc;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #2d2f31;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+  background: #f3efe7;
+  color: #3a3a3a;
 }
 
-h1 {
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Title */
+main h1 {
   text-align: center;
-  color: #5624d0;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-top: 32px;
-  margin-bottom: 33px;
-}
-
-a[href="/register"] {
-  display: inline-block;
-  margin: 0 auto 22px 36px;
-  background: #5624d0;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 7px;
+  margin-bottom: 30px;
   font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background 0.13s;
-  box-shadow: 0 3px 15px 0 rgba(86, 36, 208, 0.07);
-}
-a[href="/register"]:hover {
-  background: #401796;
 }
 
+/* Table wrapper biar ada card feel */
 table {
-  width: 94vw;
-  max-width: 1100px;
-  margin: 16px auto 36px auto;
+  width: 100%;
   border-collapse: collapse;
-  background: #fff;
-  border-radius: 17px;
-  box-shadow: 0 4px 22px 0 rgba(86, 36, 208, 0.09);
+  background: #fdf6ec;
+  border: 2px solid #d6c7b8;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
+/* Header */
 thead th {
-  background-color: #ececec;
-  color: #401796;
-  font-weight: bold;
-  padding: 12px 10px;
-  font-size: 1.05rem;
-  border-bottom: 2px solid #ececec;
+  background: #e9dfd3;
+  padding: 14px;
+  font-size: 14px;
+  text-align: left;
+  border-bottom: 2px solid #d6c7b8;
+  color: #4a4a4a;
 }
 
-tr {
-  border-bottom: 1px solid #ececec;
+/* Body */
+tbody td {
+  padding: 12px 14px;
+  font-size: 14px;
+  border-bottom: 1.5px solid #e5d9cc;
 }
 
-td {
-  padding: 11px 15px;
-  text-align: center;
-  font-size: 1rem;
+/* Hover row */
+tbody tr:hover {
+  background: #f7efe5;
+  transition: 0.2s;
 }
 
-td:last-child {
-  min-width: 120px;
+/* Last row no border */
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
-tr:nth-child(even) {
-  background: #f5f2fa;
-}
-
-tr:hover {
-  background: #f4eaff;
-  transition: background 0.09s;
-}
-
-table a {
-  padding: 6px 13px;
-  margin: 0 3px;
-  background: #fca311;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 6px;
+/* Action links */
+td a {
   text-decoration: none;
-  font-size: 0.99rem;
-  transition:
-    background 0.13s,
-    color 0.13s;
-  border: none;
-  display: inline-block;
-}
-table a:hover {
-  background: #5624d0;
-  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: 0.25s;
 }
 
-@media (max-width: 800px) {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
+/* Edit button */
+td a[href*="edit"] {
+  background: #5ba199;
+  color: white;
+}
+
+td a[href*="edit"]:hover {
+  background: #4d8f88;
+}
+
+/* Delete button */
+td a[href*="delete"] {
+  background: #e57373;
+  color: white;
+}
+
+td a[href*="delete"]:hover {
+  background: #d65c5c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table, thead, tbody, tr, td, th {
     display: block;
   }
-  thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
+
+  thead {
+    display: none;
   }
-  table {
-    width: 99vw;
-  }
+
   tr {
-    margin-bottom: 12px;
+    background: #fdf6ec;
+    margin-bottom: 15px;
+    border: 2px solid #d6c7b8;
+    border-radius: 12px;
+    padding: 10px;
   }
+
   td {
-    text-align: left;
-    padding: 12px 8vw 12px 12px;
     border: none;
-    position: relative;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
   }
-  td:last-child {
-    min-width: unset;
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #666;
   }
 }

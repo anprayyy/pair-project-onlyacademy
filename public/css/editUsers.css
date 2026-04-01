@@ -6,19 +6,20 @@ body {
   background:
     linear-gradient(
       130deg,
-      rgba(86, 36, 208, 0.14) 0%,
-      rgba(252, 163, 17, 0.07) 100%
+      rgba(210, 180, 140, 0.25) 0%,   /* cream coklat soft */
+      rgba(255, 236, 210, 0.5) 100%
     ),
-    #f8f8fc;
+    #fdf6ec; /* base cream */
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #2d2f31;
+  color: #3e3a36;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 h1 {
-  color: #5624d0;
+  color: #8b5e3c; /* coklat elegant */
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -28,13 +29,15 @@ h1 {
 }
 
 form {
-  background: #fff;
+  background: #fffaf3; /* cream putih */
   max-width: 500px;
   margin: 0 auto 40px auto;
   padding: 38px 32px 30px 32px;
   border-radius: 18px;
-  border: 1.5px solid #ececec;
-  box-shadow: 0 5px 23px 0 rgba(86, 36, 208, 0.13);
+  border: 1.5px solid #e6d5c3;
+
+  box-shadow: 0 5px 23px 0 rgba(139, 94, 60, 0.12);
+
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -42,30 +45,23 @@ form {
 
 form label {
   font-weight: 600;
-  color: #2d2f31;
+  color: #5c4a3d;
   margin-bottom: 5px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form input[type="date"],
+form input,
 form select {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #d1d7dc;
+  border: 1px solid #dccab8;
   border-radius: 8px;
   font-size: 1.03rem;
-  background: #fafafd;
+  background: #fffdf9;
   margin-bottom: 6px;
 }
 
-form select {
-  font-family: inherit;
-}
-
 button[type="submit"] {
-  background-color: #5624d0;
+  background-color: #a47551; /* coklat soft */
   color: #fff;
   border: none;
   padding: 13px 0;
@@ -74,18 +70,18 @@ button[type="submit"] {
   margin-top: 10px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.18s;
+  transition: 0.18s;
 }
 
 button[type="submit"]:hover {
-  background: #401796;
+  background: #8b5e3c;
 }
 
 /* Error styling */
 p[style*="color: red"] {
-  color: #b72d0f !important;
-  background: #ffe5e0;
-  border-left: 4px solid #b72d0f;
+  color: #8b2f1c !important;
+  background: #fff0eb;
+  border-left: 4px solid #c2410c;
   padding: 8px 10px;
   border-radius: 4px;
   font-size: 1.02rem;
@@ -94,16 +90,4 @@ p[style*="color: red"] {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (max-width: 700px) {
-  form {
-    max-width: 98vw;
-    padding: 20px 4vw;
-  }
-  h1 {
-    font-size: 1.19rem;
-    margin-top: 18px;
-    margin-bottom: 16px;
-  }
 }

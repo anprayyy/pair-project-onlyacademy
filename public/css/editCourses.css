@@ -1,116 +1,123 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background:
-    linear-gradient(
-      130deg,
-      rgba(86, 36, 208, 0.2) 0%,
-      rgba(252, 163, 17, 0.08) 100%
-    ),
-    #f9f9fc;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #2d2f31;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  background: #f3efe7;
+  color: #3a3a3a;
 }
 
-h1 {
-  color: #5624d0;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 34px;
-  margin-bottom: 28px;
-  letter-spacing: 1px;
-}
-
-form {
-  background: #fff;
+main {
   max-width: 500px;
-  margin: 0 auto 40px auto;
-  padding: 36px 28px 26px 28px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Title */
+main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Card Form */
+form {
+  background: #fdf6ec;
+  padding: 30px;
   border-radius: 16px;
-  border: 1.5px solid #ececec;
-  box-shadow: 0 3px 22px 0 rgba(86, 36, 208, 0.11);
+
+  /* 🔥 border dibuat lebih tebal */
+  border: 2px solid #d6c7b8;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
+/* Label */
 form label {
-  font-weight: 600;
-  color: #2d2f31;
-  margin-bottom: 6px;
+  font-size: 13px;
+  color: #6b6b6b;
 }
 
-form input[type="text"],
-form input[type="number"],
+/* Input */
+form input,
 form textarea,
 form select {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #d1d7dc;
-  border-radius: 8px;
-  font-size: 1.01rem;
-  background: #fafafd;
-  margin-bottom: 8px;
+  padding: 11px 12px;
+  border-radius: 10px;
+
+  /* 🔥 border lebih tebal */
+  border: 2px solid #d8cbbd;
+
+  background: #fffaf3;
+  font-size: 14px;
+  transition: 0.25s ease;
 }
 
+/* Focus lebih kelihatan */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #5ba199;
+
+  /* 🔥 ring lebih tebal */
+  box-shadow: 0 0 0 3px rgba(91, 161, 153, 0.25);
+}
+
+/* Textarea */
 form textarea {
-  min-height: 80px;
+  min-height: 110px;
   resize: vertical;
 }
 
-form select {
-  background: #fafafd;
-  font-family: inherit;
-}
-
-button[type="submit"] {
-  background-color: #5624d0;
-  color: #fff;
+/* Button */
+form button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
   border: none;
-  padding: 13px 0;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  margin-top: 8px;
+
+  background: linear-gradient(135deg, #5ba199, #4d8f88);
+  color: #fff;
+
+  font-weight: 500;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.18s;
+  transition: 0.3s;
 }
 
-button[type="submit"]:hover {
-  background: #401796;
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(91, 161, 153, 0.3);
 }
 
+/* Error */
 .p-error {
-  margin: 0 auto 10px auto;
-  max-width: 500px;
-  text-align: center;
-  font-size: 1.08rem;
-  font-weight: 600;
+  background: #ffe9e6;
+  border-left: 5px solid #e57373; /* 🔥 lebih tebal */
+  padding: 10px;
+  border-radius: 8px;
+  color: #b94a48;
+  font-size: 13px;
 }
 
-.p-error[style*="color: red"] {
-  color: #b72d0f !important;
-  background: #ffe5e0;
-  border-left: 4px solid #b72d0f;
-  padding: 8px 10px;
-  border-radius: 4px;
-  margin-bottom: 7px;
+/* Animation */
+form {
+  animation: fadeIn 0.4s ease-in-out;
 }
 
-@media (max-width: 700px) {
-  form {
-    max-width: 98vw;
-    padding: 22px 4vw;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
-  h1 {
-    font-size: 1.24rem;
-    margin-top: 22px;
-    margin-bottom: 18px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -10,7 +10,7 @@
   </head>
   <body>
     <%- include("header") %>
-
+    <main>
     <h1>Add New Material</h1>
 
     <form action="/courses/<%= data.id %>/materials/add" method="post">
@@ -22,7 +22,7 @@
 
       <button type="submit">Add Material</button>
     </form>
-
+    </main>
     <%- include("footer") %>
   </body>
 </html>
